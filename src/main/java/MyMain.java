@@ -75,9 +75,18 @@ public class MyMain {
 
         System.out.print("Please enter a string: ");
         String x = scan.nextLine();
-        System.out.println("this in uppercase is: " + myToUpperCase(x));
-        System.out.println("this in lowercase is: " + myToLowerCase(x));
+        System.out.println("type 1 for uppercase and 2 for lowercase");
+        int p = scan.nextInt();
+        if (p == 1) {
+          System.out.println("this in uppercase is: " + myToUpperCase(x));
+        }
+        if (p == 2) {
+          System.out.println("this in lowercase is: " + myToLowerCase(x));
+        }
+        //System.out.println("this in uppercase is: " + myToUpperCase(x));
+        //System.out.println("this in lowercase is: " + myToLowerCase(x));
     }
         
         
     }
+
