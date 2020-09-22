@@ -1,13 +1,14 @@
 import java.util.Scanner;
 
-public class Main {
+public class MyMain {
 
     // Changes a capital letter to a lowercase letter
     // If the char is not an uppercase letter, 
     // it is returned unchanged. 
     public static char toLower(char ch) {
       if (ch >= 65 && ch <= 90) {
-        return Character.toLowerCase(ch);
+        ch = (char) (ch + 32);
+        return ch;
       }
       if (ch >= 97 && ch <= 122) {
         return ch;
@@ -22,31 +23,15 @@ public class Main {
     // Returns a copy of a String, where all letters 
     // are now lowercase
     public static String myToLowerCase(String str) {
-      String w = " ";
-      char[] ch = str.toCharArray();
-         
-      for(int i=0;i<ch.length;i++){    
-        int chi = ch[i]; 
-        System.out.println("char");
-      
-        
-        if (chi >= 65 && chi <= 90) {
-          int y = chi + 32;
-          char x = (char) y;
-          return w + x;
-        }
-        if (chi >= 97 && chi <= 122) {
-          char x = (char) chi;
-          return w + x;
-          
-        }
-        else {
-          System.out.print("wrong input: ");
-        }
-        
-      }
-      return w;
-      
+     String w = " ";
+     for (int i = 0; i < str.length(); i++){
+       char axe = str.charAt(i);
+       if (axe >= 65 && axe <= 90) {
+         axe = (char) (axe + 32);
+       }
+       w = w + axe;
+     }
+     return(w);
     }
 
     // Changes a lowercase letter to an uppercase letter
@@ -57,7 +42,8 @@ public class Main {
         return ch;
       }
       if (ch >= 97 && ch <= 122) {
-        return Character.toUpperCase(ch);
+        ch = (char) (ch - 32);
+        return ch;
       }
       else {
         System.out.print("wrong input: ");
@@ -69,34 +55,14 @@ public class Main {
     // are now uppercase
     public static String myToUpperCase(String str) {
       String w = " ";
-      char[] ch = str.toCharArray();
-         
-      for(int i=0;i<ch.length;i++){    
-        int chi = ch[i]; 
-        System.out.println("char");
-      
-        
-        if (chi >= 65 && chi <= 90) {
-          
-          char x = (char) y;
-          return w + x;
+      for (int i = 0; i < str.length(); i++){
+        char axe = str.charAt(i);
+        if (axe >= 97 && axe <= 122) {
+          axe = (char) (axe - 32);
         }
-        if (chi >= 97 && chi <= 122) {
-            int y = chi - 32;
-          char x = (char) chi;
-          return w + x;
-          
-        }
-        else {
-          System.out.print("wrong input: ");
-        }
-        
+        w = w + axe;
       }
-      return w;
-      
-    }
-        // REPLACE WITH YOUR CODE HERE
-        return "";
+      return(w);
     }
 
 
